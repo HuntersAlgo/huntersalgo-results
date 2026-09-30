@@ -13,6 +13,7 @@ All 21 files are byte-identical copies of the ones served at `huntersalgo.com/re
 | [`hunterml/trades/`](hunterml/trades) | 10 CSV | One row per trade for each of the ten HunterML templates |
 | [`hunterml/excursions/`](hunterml/excursions) | 10 CSV | The same trades with exit price, MAE, MFE, stop and target |
 | [`hunterbreakout/`](hunterbreakout) | 1 JSON | The HunterBreakOut backtest trade log |
+| [`analysis/`](analysis) | Script, 3 charts | Summary table, cumulative result, drawdown and excursion charts built from the CSVs |
 
 ## HunterML templates
 
