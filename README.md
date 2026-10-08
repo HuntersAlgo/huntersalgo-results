@@ -57,14 +57,16 @@ The [methodology](https://huntersalgo.com/methodology), the [backtesting vs live
 | `pnl_currency` | Trade result in USD for one contract, before commission and slippage |
 | `model_version` | Identifier of the model file used for the run |
 | `model_signal`, `model_confidence` | Model output as logged by the strategy at the entry decision |
+| `exit_price` | Exit fill price in the replay, taken from the matching excursions file |
+| `direction` | `Long` or `Short`, the same side as `entry_signal` |
+| `quantity` | Contracts traded. Always `1` (one NQ contract) |
 
 ### `hunterml/excursions/template-NN-excursions.csv`
 
-The same rows and columns, plus:
+The same trades. It has the trade columns except `direction` and `quantity`, plus:
 
 | Column | Meaning |
 | --- | --- |
-| `exit_price` | Exit fill price in the replay |
 | `mae_ticks`, `mae_currency` | Maximum adverse excursion during the trade |
 | `mfe_ticks`, `mfe_currency` | Maximum favourable excursion during the trade |
 | `initial_stop_ticks`, `target_ticks` | Stop and target distance set at entry |
